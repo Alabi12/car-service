@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  customer: one
+  service: one
+  scheduled_at: 2023-06-19 00:29:40
+
+two:
+  customer: two
+  service: two
+  scheduled_at: 2023-06-19 00:29:40

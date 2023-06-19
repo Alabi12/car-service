@@ -5,6 +5,10 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable, :validatable,
          :jwt_authenticatable, jwt_revocation_strategy: self
 
+  has_many :customers
+  has_many :services
+  has_many :bookings, through: :customers
+
     def jwt_payload
       super
     end    
