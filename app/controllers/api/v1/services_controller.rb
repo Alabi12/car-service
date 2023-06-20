@@ -14,7 +14,7 @@ class Api::V1::ServicesController < ApplicationController
   
     # POST /api/v1/services
     def create
-        @service = current_user.services.build(service_params)
+        @service = current_user.services.new(service_params)
       if @service.save
         render json: @service, status: :created
       else
