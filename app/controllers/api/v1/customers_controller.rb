@@ -14,7 +14,7 @@ class Api::V1::CustomersController < ApplicationController
   
     # POST /api/v1/customers
     def create
-      @customer = Customer.new(customer_params)
+      @customer = current_user.customers.new(customer_params)
       if @customer.save
         render json: @customer, status: :created
       else
